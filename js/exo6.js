@@ -41,23 +41,6 @@ const animaux = [
   }
 ];
 
-// variables = source;
-let source = [1, 5, 42];
-
-let [a, b, c] = source;
-
-a; // 1
-b; // 5
-c; // 42
-
-
-
-let [canard, chat, lion, mouton] = animaux;
-console.log(canard);
-console.log(chat);
-console.log(lion);
-console.log(mouton);
-
 
 
 

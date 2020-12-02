@@ -44,23 +44,8 @@ const data = [
   },
 ];
 
-console.log(data);
-const characters = data.map(callback);
-console.log(data);
-console.log(characters);
+const characters = data.map(/* ... */);
 
-function callback(character, index, data) {
-  console.log(character);
-
-  // ..
-
-  return {
-    name: character.firstname + ' ' + character.lastname,
-    young: character.age < 50
-  };
-
-  // return character.age < 50;
-}
 
 
 

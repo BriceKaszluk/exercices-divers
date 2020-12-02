@@ -19,27 +19,15 @@ Notions
 
 const items = ['Sunglasses', 'Suit', 'Business card', 'Jet ski'];
 
-/**
- * 
- */
-items.forEach(function(item) {
-  console.log(item);
-  
-  // 1. on va avoir besoin, pour appendChild, d'un nœud / élément
-  //    donc on le crée (en terme de type de données, c'est un objet JS)
-  let elt = document.createElement('li'); // on crée un Node du DOM
-  elt.textContent = item;
+const list = document.getElementById('result')
 
-  // 2. on sélectionne l'endroit pré-existant du HTML où on fera
-  //    l'injection de contenu
-  let target = document.getElementById('result');
+//boucler le tableau
+items.forEach(item => {
+    //créer élément <li>
+    const listElement = document.createElement('li')
+    //on insère la valeur du tableau dans l'élément créé
+    listElement.textContent = item
+    //insérer <li> dans le result
+    list.appendChild(listElement)
+})
 
-  // 3. on utilise appendChild pour modifier le DOM (donc on travaille
-  //    dans le contexte JS, pas HTML)
-  target.appendChild(elt);
-
-
-});
-
-// items.forEach(generateLi);
-// function generateLi() { ... }
