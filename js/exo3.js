@@ -42,12 +42,11 @@ let boxes2 = document.querySelectorAll('.box');
 
 
 
-
-// On inverse setTimeout et forEach !
-boxes2.forEach(displayBox);
-
-function displayBox(item, index, items) {
-  setTimeout(function() {
+let displayBox = (item, index, items) => {
+  setTimeout(() => {
     item.style.display = 'block';
   }, 1000 * index);
 }
+
+// On inverse setTimeout et forEach !
+boxes2.forEach(displayBox);
