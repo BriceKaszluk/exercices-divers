@@ -27,6 +27,13 @@ const user = {
   lang: 'fr',
 };
 
+let {firstName: name, login} = user;
+console.log(name);
+console.log(login);
+
+// let firstName = user.firstName;
+// let login = user.login;
+
 
 
 
