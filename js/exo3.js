@@ -25,9 +25,29 @@ Notions
 // Mieux vaut utiliser querySelector[All]
 let boxes2 = document.querySelectorAll('.box');
 
+// function displayBox(item, index, items) {
+//   console.log(item);
+//   item.style.display = 'block';
+// }
+
+// function displayWithADelay() {
+//   boxes2.forEach(displayBox);
+// }
+
+// var delay = 1000;
+
+// C'est pas mal, mais le fait de faire le setTimeout en premier ne
+// permet pas de gérer l'évolution du délai.
+// setTimeout(displayWithADelay, delay);
+
+
+
+
+// On inverse setTimeout et forEach !
 boxes2.forEach(displayBox);
 
 function displayBox(item, index, items) {
-  console.log(item);
-  item.style.display = 'block';
+  setTimeout(function() {
+    item.style.display = 'block';
+  }, 1000 * index);
 }
