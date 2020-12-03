@@ -60,7 +60,12 @@ const users = [
   },
 ];
 
-const allowedUsers = users;
+let isUserAllowedInNightClub = (user, index, users) => {
+  return (user.age > 18 && user.cash > 20) || user.cash > 500;
+};
+
+const allowedUsers = users.filter(isUserAllowedInNightClub);
+console.log(allowedUsers);
 
 
 
