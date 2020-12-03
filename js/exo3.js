@@ -17,3 +17,17 @@ Notions
 - JS : for ou forEach / setTimeout
 
 */
+
+// getElementsByClassName retourne un objet de type HTMLCollection
+// qui malheureusement ne possède pas la fonction forEach :(
+// let boxes1 = document.getElementsByClassName('box');
+
+// Mieux vaut utiliser querySelector[All]
+let boxes2 = document.querySelectorAll('.box');
+
+boxes2.forEach(displayBox);
+
+function displayBox(item, index, items) {
+  console.log(item);
+  item.style.display = 'block';
+}
