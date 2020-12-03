@@ -25,3 +25,17 @@ const user = {
   lang: 'fr',
 };
 
+/**
+ * Display a full name
+ * 
+ * @param Object must contain a firstName and lastName string keys
+ */
+let sayHelloToUser = ({ firstName, lastName }) => {
+  if (firstName && lastName) {
+    return firstName + ' ' + lastName;
+  }
+  throw "Invalid values";
+};
+
+
+console.log(sayHelloToUser(user));
