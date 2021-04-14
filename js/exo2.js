@@ -44,7 +44,20 @@ const data = [
   },
 ];
 
-const characters = data.map(/* ... */);
+const characters = data.map(user => {
+  const name = `${user.firstname} ${user.lastname}`
+  
+  function ageTest(age) {
+    if(age < 50) {
+      return true
+    } else return false
+  }
+
+  const young = ageTest(user.age)
+  return {name, young}
+});
+
+console.log(characters)
 
 
 
